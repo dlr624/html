@@ -1,0 +1,24 @@
+#p03{
+    color: brown;
+}
+
+#p04{
+    color: chocolate;
+}
+
+article {
+    width: 500px;
+    padding: 15px;
+    border: 5px dashed rgb(99, 28, 28);
+}    
+
+#h201 {
+    color: crimson;
+    background-color: darkblue;
+}
+
+.h2class {
+    color: darkblue;
+    border: 1px solid darkmagenta;
+    margin: 10px;
+}
