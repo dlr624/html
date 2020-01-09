@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css 2일차 3</title>
+
+    <style>
+        /* color */
+        /* 문자의 색상을 변경하는 CSS속성 */
+        /* 색상을 지정하는 방법은 미리 지정된 생상 단어를 입력, (140개) */
+        /* gex코드 입력방식, rgb 코드 입력 방식 hsl코드 입력 방식, rgba코드 입력방식,
+        hsla코드 입력방식*/
+        /* 미리 지정된 색상 단어 입력 방식 */
+        /* https://www.w3school.com/colors/colors_names.asp */
+        /* color : red; */
+
+        /* hex코드 입력 방식 */
+        /* 색상 코드를 17진수로 표현하여 red,green, blue순서대로 2자리씩 총 6자리를 입력하는 방식 */
+        /* 색상 코드는 00~ff */
+        /* hex 코드 입력방식을 뜻하는 기호 #을 입력 */
+        /* color : #AABBCC */
+
+        /* rgb코드 입력방식 */
+        /* 색상코드를 10진수 숫자 (0 ~ 255) 를red, green blue 순서대로 입력하는 방식 */
+        /* alpha 값은 0.0~ 0.1 까지의 값을 가지고 있음 */
+        /* 입력 순서는 red, green blue, alpha 순서로 입력 */
+        /* rgba 코드 입력방식을 뜻하는 rgba(0,0,0,0) 형태로 입력 */
+
+        /* color : rgba(100, 200. 130, 0.5); */
+        /* hsl코드 입력방식 */
+        /* rgb 방식과는 달리 색상을 색조, 채도, 명도로 구분하여 표현하는 방식 */
+        /* 색조는 0~300 까지의 숫자를 입력, 채도 0~ 100 까지의 % 를 입력, 명도 0~ 100 까지의 %를 입력하는 방식 */
+        /*  입력 순서는 색조, 채도, 명도 순으로 입력 */
+        /* hsl 코드 입력방식을 뜻하는 hsl(0,0,0) 형태로 입력 */
+        /* hsl(300, 80%, 70%); */
+
+        /* hsla코드 입력 방식 */
+        /* hsl코드 입력방식에 투명도를 나타내는 알파값을 추가한 방식 */
+        /* COLOR : HSLA(330, 80%, 70%,0.3) */
+
+        /* 참고색상변환기 */
+        /* https://www.quackit.com/css/color/tools/css_color_picker.cfm */
+
+        /* color 속성에 사용한 값은 문자 뿐 아니라 다른 속성에서도 사용 할 수 있음 */
+        /* 색상 이름, hex 코드 입력방식을 가장 많이 사용함 */
+        h1{ color: rgb(0, 200, 0);}
+        h2{ color: blue}
+        .accent {color: #FF0000 ;}
+        .hsl { color: hsl(100, 70%,30%c)}
+
+        /* 색 이름  */
+        p { line-height: e.1.8;}
+        a { text-decoration: none;}
+        .edited {text-decoration: line-through;}
+
+        #div02 a:hover { text-decoration: underline;}
+
+        /* text-trasform */
+        /* 영문자의 모양을 대문자, 소문자로 변경할 떄 사용하는 css속성 */
+        /*  none, capitlize(첫 글자만) uppercase( 모든글자 대문자), lowercase*모든글자 소문자, full wtdth 가능한 모든 문자를 전각 문자로변환 */
+
+        #div03 .trans1{ text-transform: uppercase;}
+        #div03 .trans2{ text-transform: lowercase;}
+        #div03 .trans3{ text-transform: capitalize;}
+        #div03 .trans4{ text-transform: full-width;}
+
+
+    </style>
+
+
+</head>
+
+
+<body>
+    <div>
+        <h3>색상 속성</h3>
+        <h1> 세계 10대 슈퍼 푸드 </h1>
+        <ing src="" alt="">
+        <h2>마늘(garlic)</h2>
+        <p>일해백리 는...</p>
+        <p>마늘 <span class="hsl">야야야</span> 특유의 아린 맛은 <span class="accent">알리산</span></p>
+        
+        <br><br><br>
+            <!-- text decoration -->
+            <!-- 입력된 문자에 선을 추가하는 css속성 -->
+            <!--  none, underline(밑줄), overline(윗줄), line-through(취소선) -->
+            <!-- a태그에 기본적으로 underline 속성값이 적용되어 있음 -->
+
+        <div id="div02">
+
+            <h3>TEXT decoration</h3>
+                <p> 다양한 기기로 인터넷에 접속할 수 있는 요즘, <br>
+                <span class="edited">HTML4</span>Html5 를 공부해야 할 떄입니다.</p>
+                <p><a href="https://html.spec.whatwg.org/" target="blanck"><b>tml5 표준 규약 살펴보기</b></a></p>
+        </div>
+
+
+    </div>    
+    <br><br><br>
+
+        <div id="div03">
+            <h3>text transform</h3>
+            <ul>
+                <li class="trans1"> htaml</li>
+                <li calss="trans2">CSS</li>
+                <li class="trans3">javascript</li>
+                <li class="trans4">android</li>
+            </ul>
+        </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6일차 CSS 2번쨰</title>
+
+<style>
+    /* css선택자 */
+    /* html 속성을 적용하기 위하여 지정한 html 태그를 정확히 선택하기 위한 구분자 */
+    /* 전체 선택자 */
+    /* 해당 페이지의 모든 html 태그를 선택하는 선택자 */
+    /* 주로 해당페이지의 전체 스타일을 적용하기 위해서 가장 먼저 사용됨 */
+    /* *기호를 사용함  */
+* {
+    font-family: '궁서체';
+}
+
+/* 태그 선택자 */
+/* html 태그명을 그대로 사용하는 선택자 */
+/* 해당 페이지의 지정한 html 태그명과 같은 모든 태그를 선택하는 선택자 */
+/* 지정한 html 태그에 동일한 스타일을 적용하기 위해서 사용함 */
+
+
+h2 {
+    color: blue;
+}
+
+p {
+    font-size: 12px;
+   
+    margin-left: 20px;
+}
+
+.redtext {
+    color: red;
+}
+/* html 태그명과 함꼐 클라스 선택자를 동시에 사용할 수 있음 */
+h2.redtext {
+    margin-left: 50px;
+
+    font-weight: lighter;
+}
+/* CLASS선택자 */
+/* 다른종류의 html태그를 하나의 그룹으로 묶어서 CSS속성을 적용하는 선택자 */
+/* .기호를 사용 */
+/* html 태그에 calss 속성을 사용하여 그룹명을 지정함 */
+
+/* id선택자 */
+/* 지정한  html 의 id속성값을 기준으로 html 태그를 선택하는 선택자 */
+/* # 기호를 사용함 */
+/* 해당 html 페이지에서 id는 유일한 값을 가지기 있기 떄문에 단 하나의 태그를 선택하는 선택자 */
+h1, h2{
+    text-align: center; 
+}
+/* 그룹 선택자 */
+/* 같은 속성을 저굥ㅇ할떄 해당 선택자들을 모아서 한번에 입력 하는방법 */
+/* , 기호를 사용한다 */
+/* 선택자의 종류는 상관없이 , 로 구분하여 여러개의 선택지를 동시에 입력할 수 있음 */
+
+#purpletext {
+    background-color: purple;
+}
+/* !important <-- 가장 우선순위가 높다 */
+/* CSS 속성을 상속받아서 사용할 경우 나중에 실행되는 속성이 기존속성을 무시하고 활성되게 
+되는 경우가 발생하는데 기존의 속성에 !important 속성값을 사요ㅕㅇ하게 되면 속성이 무시되지않고 나중에 실행되는 속성이 무시됨 */
+div > h3 {
+    text-align: right;
+}
+ 
+</style>
+
+
+</head>
+<body>
+    <h1 class="redtext">블루베리에 관한 연구</h1>
+    <h2 id="purpletext">블루베리와 항산화 연구</h2>
+    <p class="redtext">블루베리는 .... 합니다</p>
+    <h2 class="redtext">블루베리와 노화</h2>
+    <p style="background-color: teal;"> usda... 발견하였습니다</p>
+
+
+    <div>
+        <p>대법관의 임기는 6년으로 하며, 법률이 정하는 바에 뭐라샬라샬라</p>
+    </div>
+
+    <br><br><br>
+    <div>
+        <h1>CSS</h1>
+        <h1>웹 문서의 디자인과 내용으 분리한다</h1>
+        <p>내용은 hr</p>
+    </div>
+    
+</body>
+</html>

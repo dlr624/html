@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2일차 1번파일</title>
+    
+
+    <!--  외부 서버에서 웹 폰트 업체에서 제공하는 폰트를 로드하여 사용하기 -->
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Gaegu&display=swap" rel="stylesheet">
+
+    <style>
+
+
+    /* font family */
+    /* 글꼴을 설정하는 CSS속성 */
+    /* 자신의 컴퓨터에 설치되어 있는 글꼴명을 그대로 사용하면 됨 */
+    /* []는 글꼴을 옵션으로 사용할 수도 안할 수도 있다는 ㄴ의미 */
+    /* 글꼴은 여러개 동시에 사용가능 */
+    /* 글꼴은 , 를 사용하여 어러개 동시사용가능 */
+    /* 글꼴의 순서대로 사용이됨 */
+
+    * {
+        font-size: 30px;
+        /* font-family: 'courier', monospace, 'Courier New';  */
+        /* font-family: 'Nanum Brush Script', cursive; */
+        font-family: 'Black Han Sans', cursive;
+    
+    }
+
+    /* @font-face */
+    /* 외부서버에서 지원하는 폰트가 아닐경우 자신이 직접 폰트를 업로드 하여 그 해당 폰트를 사용자가 사용하게 하는 방식 */
+    /* 폰트는 저작권이 있기 떄문에 저작권 있는 폰트를 사용시 법적문제가 발생할 수 있다 */
+    @font-face {
+    font-family: 'Gaegu';
+    src: url('Gaegu-Regular.eot');
+    src: url('Gaegu-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Gaegu-Regular.woff2') format('woff2'),
+        url('Gaegu-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.w-font {
+    font-family: 'gaegu';  
+}
+
+
+    </style>
+
+    
+</head>
+<body>
+    <p>오늘도 날이 맑아서</p>
+    <p class="ng-font"> 너를 찾게 된다.</p>
+    <p class="w-font">언젠가 돌아올 날을</p>
+</body>
+</html>

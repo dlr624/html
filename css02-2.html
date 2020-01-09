@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css2일차 2</title>
+    <style>
+         @font-face {
+    font-family: 'Gaegu';
+    src: url('Gaegu-Regular.eot');
+    src: url('Gaegu-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Gaegu-Regular.woff2') format('woff2'),
+        url('Gaegu-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+        font-size: 30px;
+        /* font-family: 'courier', monospace, 'Courier New';  */
+        /* font-family: 'Nanum Brush Script', cursive; */
+        font-family: 'gaegu', cursive;
+    
+    }
+.w-font {
+    font-family: 'gaegu';  
+}
+
+.fontpx {
+    font-size: 16px;
+}
+
+.fontem {
+    font-size: 1em;
+}
+
+.font100 {
+    font-size: 100%;
+}
+
+/* font-weight */
+/*  문자의 굵기를 설정하는 css 속성 */
+/* 설정은100~900 까지의 숫자로 굵기를표현 (400이 기본)  */
+/* 미리 설정된 형태의 단어도 존재함 */
+/* normal(기본값), bold, lighter, bolder */
+
+/* font-varint */
+/* 영문자 작은 크기의 대문자로 설정하는 CSS속성 */
+/* normal, small-caps */
+/* 주로 제목부분에  */
+.accent {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+p.italic {
+    font-style: italic;
+}
+p.normal {
+    font-style: normal;
+}
+p.oblique {
+    font-style: oblique;
+}
+/* font-style */
+/* 문자의 모양을 이텔릭체로 변경하는 CSS 속성 */
+/* normal,itarlic,oblique*/
+/*  이탈릭은 폰트 작성시 기울여져 있는 폰트를 디자인하여 추가해 놓은 것을 사용하는 것이고 oblique는 화면 표시상에
+기울여지게 표현하는 것  */
+
+/*font */
+/* font에 관련된 여러가지 css속성을 한번에 적용하는 CSS속성 */
+/* font size , font stlye, font weight ,  */
+/* font-family 로 한번에 적용 가능 */
+
+p.font01 {
+    font: italic small-caps bold 24px/30px "고딕체";
+
+}
+p.font02 {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+    </style>
+</head>
+<body>
+    <h1 style="font-weight: 400;">테스트1</h1>
+    <p>기본글꼴</p>
+    <p class="fontpx">폰트기본 16 픽셀크기</p>
+    <p class="fontem">폰트기본 2em 크기</p>
+    <p class="font100">폰트 100% 프로일떄</p class="font100">
+        
+
+        <p style="font-size: 16px;">16px크,기의 글꼴</p>
+        <p style="font-size: 1em">1em 크기의 글꼴</p>
+        <p style="font-size: 100%">100%의 크기의 글꼴</p>
+        <p style="font-size: 24px;">24px 크기의 글꼴</p>
+        <p style="font-size: 1.5em;">1.5em 크기의 글꼴</p>
+        <p style="font-size: 150%;">150%의 크기의 글꼴</p>
+        <p style="font-size: 32px;">32px 크기의 글꼴</p >
+        <p style="font-size: 2em;">2드 크기의 글꼴</p>
+        <p style="font-size: 200%;">200%의 크기의 글꼴</p>
+
+        <br><br><br>
+
+        <p>font-weight : normal</p>
+        <p style="font-weight: 400;">font-weight : 400</p>
+        <p style="font-weight: bold;">font-weight : bold</p >
+        <p style="font-weight: 700;">font-weight : 700</p>
+        <p style="font-weight: normal;">font-weight : normal</p>
+        
+        <br><br><br>
+
+        <h3>font-variant 속성</h3>
+        <p><span class="accent">시드니 sydney</span>,호주</p>
+        <p><spanc class="accent">리우뭐시기</spanc></p>
+        <p><spanc class="accent">나폴리</spanc></p>
+
+        <h3>font style 속성</h3>
+        <p>font style 을 사용하지 않았을경우</p>
+        <p class="normal">font style : normal 일 경우</p>
+        <p class="italic">font style : italic 일 경우</p>
+
+        <br><br><br>
+
+        <h3>font 속성</h3>
+        <p class="font01">font를 사용하여 여러가지 속성을 한번에 적용</p>
+        <p class="font02">마마 머머머니머 여러가지 속성</p>
+
+
+</body>
+</html>
