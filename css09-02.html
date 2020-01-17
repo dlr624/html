@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    #div02 .scalex:hover { transform: scaleX(1.2);}
+    #div02 .sscley:hover { transform: scaleY(1.5);}
+    #div02 .scale:hover { transform: scale(0.7);}
+
+    /* rotate */
+    /* html 태그 요소를 회전시키는 css속성 . 함수 */
+    /* html 태그 요소의 중심을 기준으로 . 회전 */
+    /* 2차원 ,3차원 모두 가능 */
+    /* transform : rotate(x,y); 형식으로 사용 */
+    /* () 안의 값을 deg(각도)로 표현 */
+    #div03 .rtated1:hover {
+        -webkit-transform: rotate(20deg);
+        -moz-transform: rotate(20deg);
+        -o-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+        transform: rotate(20deg);
+    }
+    #div03 .rotate2:active {
+        -webkit-transform: rotate(-40deg);
+        -moz-transform: rotate(-40deg);
+        -o-transform: rotate(-40deg);
+        -ms-transform: rotate(-40deg);
+        transform: rotate(-40deg);
+    }
+/* 양의 정수 일때 시계방향 음의정수 시계반대방향 */
+
+/* 3차원 회전 함수를 사용 시 x,y,z축으로 회전이 가능함 */
+    
+    
+    #div03 .rotate3d {perspective: 500px;}
+    #div03 .rotatex {
+        -webkit-transform: rotateX(45deg);
+        -moz-transform: rotateX(45deg);
+        -o-transform: rotateX(45deg);
+        -ms-transform: rotateX(45deg);
+        transform: rotateX(45deg);
+    }
+    #div03 .rotatey {
+        -webkit-transform: rotateY(45deg);
+        -moz-transform: rotateY(45deg);
+        -o-transform: rotateY(45deg);
+        -ms-transform: rotateY(45deg);
+        transform: rotateY(45deg);
+    }
+    #div03 .rotatez {
+        -webkit-transform: rotateZ(45deg);
+        -moz-transform: rotateZ(45deg);
+        -o-transform: rotateZ(45deg);
+        -ms-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+    }
+    #div03 .rotatex {
+        -webkit-transform: rotate3d(2.5, 1.2, -1.5, 45deg);
+        -moz-transform: rotate3d(2.5, 1.2, -1.5, 45deg);
+        -o-transform: rotate3d(2.5, 1.2, -1.5, 45deg);
+        -ms-transform: rotate3d(2.5, 1.2, -1.5, 45deg);
+        transform: rotate3d(2.5, 1.2, -1.5, 45deg);
+    }
+    /* skew */
+    /* html 태그 요소를 지정한 각도만큼 왜곡시키는 css 속성 함수 */
+    /* transform: skew(x,y); 형태로 사용 */
+    #div04 .skewx:hover {
+        -webkit-transform: skewX(30deg);
+        -moz-transform: skewX(30deg);
+        -o-transform: skewX(30deg);
+        -ms-transform: skewX(30deg);
+        transform: skewX(30deg);
+
+    }
+    #div04 .skewy:hover {
+        -webkit-transform: skewY(15deg);
+        -moz-transform: skewY(15deg);
+        -o-transform: skewY(15deg);
+        -ms-transform: skewY(15deg);
+        transform: skewY(15deg);
+    }
+    #div04 .skew:active {
+        -webkit-transform: skew(15deg);
+        -moz-transform: skew(15deg);
+        -o-transform: skew(15deg);
+        -ms-transform: skew(15deg);
+        transform: skew(15deg);
+    }
+    /* transform-orligin */
+    /* html 태그 요소의 변형 기준을 지정하여 변경할 수 있는 css 속성 */
+    /* transform-orligin: x, y, z; 형태로 사용 */
+    /* x : 기준의 x 좌표값, (길이, 백분율, left, center, right) */
+    /* y : 기준의 y 좌표값, (길이, 백분율, top, center, bottom) */
+    /* z : 기준의 z 좌표값, (길이) */
+    #div05 { margin-left: 50px;}
+
+    #div05 .ltop .pang:hover { transform-origin: left top; }
+    #div05 .rtop .pang:active { transform-origin: right top; }
+    #div05 .lbottom .pang:active { transform-origin: left bottom; }
+    #div05 .rbotoom .pang:active { transform-origin: right bottom; }
+    #div05 .pang { 
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    /* perspective, perspective-origin */
+    /* 3차원 변형을 위해서 사용하는 원근감을 표현하기 위한 css속성*/
+    /* 송성값은 0보다 커야함 (원금감크기 px, none) */
+    /* perspective-origin */
+    /* 3차원 변형을 위해서 사용하는 우너금감의 기준을 설정하는 css속성 */
+    /* x,y축의 값을 입력 (길이, 백분율, left*/
+
+    #div06 .rotatex img { transform: rotateX(50deg);}
+    #div06 .pers { perspective: 300px;}
+    /* #div06 .pers { */
+        /* -webkit-perspective-origin: left top; */
+        /* -moz-perspective-origin: left top; */
+
+        
+    
+
+    /*  flat(평면)preserve-3d (3d효ㅕ과) */
+    
+    #div07 div {
+        width: 200px;
+        height: 200px;
+        
+    }
+    #div07 > div {
+        perspective: 300px;
+        border: 1px solid black;
+    }
+    #div07 .box1 {
+        background: #82cdd8;
+        transform: rotateY(45deg);
+        
+    }
+
+    #div07 .box2 {
+        background: #0d6097;
+        transform-origin: left top;
+        transform: rotateX(45deg);
+        
+    }
+
+    #tr-style1 { transform-style: flat;}
+    #tr-style2 { transform-style: preserve-3d;}
+
+    /* backface-visibility */
+    /* html 태그 요소를 변형하여 회전 시킬 경우 html 태그 요소의 뒷면을
+    화면 출력 여부 설정하는 css속성 */
+    /* visible (기본값), hidden  */
+
+    #div08 div {
+        width: 200px;
+        height: 200px;
+    }
+
+    #div08 .container{
+        border: 1px solid black;
+        perspective: 300px;
+    }
+    #div08 .box:active {
+        background: #050707;
+        -webkit-transform: rotateY(135deg);
+        -moz-transform: rotateY(135deg);
+        -o-transform: rotateY(135deg);
+        -ms-transform: rotateY(135deg);
+        transform: rotateY(135deg);
+
+    }
+    #div08 .box:hover {
+        background: #030505;
+        -webkit-transform: rotateY(135deg);
+        -moz-transform: rotateY(135deg);
+        -o-transform: rotateY(135deg);
+        -ms-transform: rotateY(135deg);
+        transform: rotateY(135deg);
+
+    }
+    #back1 {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    #back2 {
+        -webkit-backface-visibility: visible;
+        -moz-backface-visibility: visible;
+        -o-backface-visibility: visible;
+        -ms-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+
+    
+
+</style>
+</head>
+
+<body>
+        
+    <div id="div03">
+        <h3>2차원회전</h3>
+        <div class="rotate2d">
+            <img src="../image/002.jpg" alt="" class="rotate1">
+        </div>
+        <br>
+    <div class="rotate2d">
+        <img src="../image/003.jpg" alt="" class="rotate2">
+    </div>
+
+        <h3>3차원 회줜</h3>
+        <div class="rotate3d">
+            <img src="../image/011.jpg" alt="" class="rotatex">
+        </div>
+        <br>
+        <div class="rotate3d">
+            <img src="../image/4.jpg" alt="" class="rotatey">
+        </div>
+        <br>
+        <div class="rotate3d">
+            <img src="../image/5.jpg" alt="" class="rotatez">
+
+        </div>
+        <div class="rotate3d">
+            <img src="../image/001.jpg" alt="" class="rotatexyz">
+        </div>
+    </div>
+
+    <br><br><br><br><br><hr>
+
+    <div id="div04">
+        <div>
+            <img src="../image/a1.jpg" alt="" class="skewx">
+        </div>
+        <div>
+            <img src="../image/002.jpg" alt="" class="skewy">
+        </div>
+        <div>
+            <img src="../image/001.jpg" alt="" class="skew">
+        </div>
+    </div>
+    <br><br><br><hr>
+
+    <div id="div05">
+        <div class="ltop">
+            <img src="../image/003.jpg" alt="" class="pang">
+        </div>
+        <br>
+        <div class="rtop">
+            <img src="../image/003.jpg" alt="" class="pang">
+        </div>
+        <br>
+        <div class="lbottom">
+            <img src="../image/003.jpg" alt="" class="pang">
+        </div>
+        <br>
+        <div class="rbottom">
+            <img src="../image/003.jpg" alt="" class="pang">
+        </div>
+    </div>
+
+    <div id="div06">
+        <div>
+            <img src="../image/002.jpg" alt="">
+        </div>
+        <div class="no-pers">
+            <div class="rotatex"> 
+            <img src="../image/002.jpg" alt="">
+            </div>
+        </div>
+        <div class="pers">
+            <div class="rotatex"> 
+            <img src="../image/002.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="div07">
+        <div>
+            <div class="box1" id="tr-style1">
+                <div class="box2"></div>
+            </div>
+        </div>
+        <br>
+        <div>
+            <div class="box1" id="tr-style2">
+                <div class="box2"></div>
+            </div>
+        </div>    
+    </div>
+<br><br><br><br><br><br><hr>
+    <div id="div08">
+        <div class="container">
+            <div class="box" id="back1"><h1>BACK</h1></div>
+        </div>
+        <div class="container">
+            <div class="box" id="back2"><h1>BACK</h1></div>
+        </div>
+    </div>
+    
+
+    
+</body>
+
+</html>

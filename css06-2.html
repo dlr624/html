@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6일차 1번</title>
+
+    <style>
+
+        div { border: solid rgb(71, 68, 68);
+              border-width: 1px;
+            }
+
+        #div01 > div { box-sizing: border-box; }
+        #div01 > .box {
+            width: 33.3%;
+            padding: 50px;
+            /* float: left; */
+            margin: 0 auto;
+        }
+        
+
+        #div01 > .box1 { 
+            width: 100%;
+            padding: 20px;
+            margin-bottom: 10px;
+            background-color: #bbbbbb;
+         }
+        #div01 > .box2 { 
+            width: 20%;
+            padding: 20px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            float: left;
+            background-color: #CCCCCC; }
+         #div01 > .box5 { 
+            width: 20%;
+            padding: 20px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            float: right;
+            background-color: #CCCCCC; }
+        #div01 > .box3 {
+            width: 57%;
+            padding: 20px;
+            margin-bottom: 10px;
+            
+            float: left;
+            background-color: #dddddd; }
+        #div01 > .box4 {
+            padding: 20px;
+            clear: both;
+            width: 100%;
+            background-color: blanchedalmond;}
+
+        /* 문제 1) 예제를 기반으로 화면 레이아웃을 3단 헤더, 메인 컨텐츠 사이드바 푸터 인 화면과// 헤더,왼쪽사이드바,메인컨텐츠,오른쪽 사이드바, 푸터 인 화면 2개를 생성하세요*/
+        /* 2단 화면은 사이드바의 위치는 상관 없음  */ 
+        /* 사이드의 크기가 20%를 넘지 않도록 해야함 */
+    
+    </style>
+</head>
+<body>
+
+    <div id="div01">
+        <!-- class 는 값을 여러개 가질 수 있음 -->
+        <!-- class 값이 여러개일 경우 여러 class의 속성을 모두 사용함 -->
+        <div class="box box1">
+            <h1>사이트제목</h1>
+            
+        </div>
+        <div class="box box2">
+            <ul>왼쪽 사이드바
+                <li>ㅇㅇ</li>
+                <li>ㅇㅇㅇ</li>
+                <li>ㅇㅇ</li>
+                <li>ㅇㅇㅇ</li>
+            </ul>
+        </div>
+        <div class="box box5">
+            <ul>오른쪽 사이드바
+                <li>ㅇㅇ</li>
+                <li>ㅇㅇㅇ</li>
+                <li>ㅇㅇ</li>
+                <li>ㅇㅇㅇ</li>
+            </ul>
+        </div>
+        <div class="box box3">
+            <p><p>국회의원과 정부는 법률안을 제출할 수 있다. 모든 국민은 그 보호하는 자<p>국회의원과 정부는 법률안을 제출할 수 있다. 모든 국민은 그 보호하는 자녀에게 적어도 초등교육과 법률이 정하는 교육을 받게 할 의무를 진다.</p>녀에게 적어도 초등교육과 법률이 정하는 교육을 받게 할 의무를 진다.</p></p>
+        </div>
+        <div class="box box4">
+            <p><p>국회의원과 정부는 법률안을 제출할 수 있다. 모든 국민은 그 보호하는 자녀에게 적어도 초등교육과 법률이 정하는 교육을 받게 할 의무를 진다.</p></p>
+        </div>
+
+    </div>
+    
+</body>
+
+</html>

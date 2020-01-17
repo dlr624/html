@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css 6일차 6</title>
+
+    <style>
+    /* position */
+    /* html 태그를 원하는 위치에 배치하기 위한 css속성 */
+    /* static, relative, absolute,fixed */
+    /* relative, absolute, fixed는 위치 좌표 속성 ,top ,right,bottom,left를 추가로 사용할 수 있음 */
+    /* static :상대위치 좌표 사용()  */
+        /* 다른 html 태그의 위치에 따라 현재 html 태그의 위치가 정해짐 */
+    /* relative : 상대 위치 좌표 사용 */
+        /* 다른 html 위치에 따라 현재 html 태그의 위치가 정해짐 */
+    /* absolute : 절대위치 좌표 사용
+        /* 다른html태그의 위치와 상관없이 0 x 0 에서 시작 */
+        /* 부모태그의 position 값이 relative이어야함  */
+    /* fixed : 절대 위치 좌표 사용 */ 
+        /* 다른html태그의 위치와 상관없이 0 x 0 에서 시작(브라우저 위치(body태그)) */
+        
+        /* top : html에 그려질 기준을 지정하는 속성 */
+        /*  right html 그려질 기준을 정하는 속성 우측기준*/
+        /* bottom 그려질 기준을 정하는 속성 하단기준*/
+        /* left 그려질 기준을 정하는 속성 좌측기준*/
+            /* 따로 지점을 지정하지 않으면 top left가 기준이됨 */
+            /* 값을 - 로입력시 기준은 그대론데 그리는위치가반대로 */
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            
+        }
+        .red { background-color: red;}
+        .green { background-color: green;}
+        .blue { background-color: blue;}
+        /* static */
+        #div01 .red { position: static;}
+        #div02 .green { position: static;}
+        #div03 .blue { position: static;}
+        #div04 {
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+            position: relative;
+        }
+        /* relative */
+        #div01 .red {
+            position: relative;
+            tlqkf
+            }
+        #div02 .green {
+            top: 100px;
+            left: 100px;
+            position: relative;}
+        #div03 .red {
+            width: 300px;
+            height: 300px;
+            position: absolute;}
+        #div03 .green {
+            width: 200px;
+            
+            height: 200px;
+            position: absolute;}
+        #div03 .blue {
+            width: 100px;
+            height: 100px;
+            right: 10px;
+            left: 10px;
+            position: absolute;}
+        /* absolute */
+
+        #div04 .red {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+        }
+
+      #div05 > .box1{
+          float: left;
+          width: 100px;
+          background: #ffd800;
+          margin-right: 10px;
+          padding: 20px;
+      }  
+      #div05 > .box2{
+          position: relative;
+          left: -50px;
+          top: 30px;
+          width: 300px;
+          background: #0094ff;
+          float: left;
+          padding: 20px;
+
+      }
+
+      #div06 {
+          position: relative;
+          width: 300px;
+          height: 300px;
+          border: 1px solid #ccc;
+
+      }
+      /* 자식태그의 positiond : absolute 이기떄문에 부모태그의 position이 relative */
+      #div06 > .box {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          background: #0094ff;
+          /* 자식태그가 position:absolute 면 부모태그는 반드시 position:relative 여야함 */
+
+      }
+
+      #crd1 {top: 0; left: 0;}
+      #crd2 {top: 0; right: 0;}
+      #crd3 {bottom: 0; left: 0;}
+      #crd4 {bottom: 0; right: 0;}
+      #crd5 {top: 100px; left: 100px;}
+            
+    /* position sticky */
+    /* 기본형태는 일반 html 태그처럼 스크롤 되다가 특정 위치에 닿게 되면 그곳에 붙어서 고정되는 형태 */
+
+    #div07 .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 20px;
+        padding: 5px;
+        background-color: #0094ff;
+        border: 2px solid black;
+    }
+         
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <h3>position static</h3>
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+
+    </div>
+    <br><br><br>
+    <div id="div02">
+        <h3>relative</h3>
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+        
+    </div>
+    <br><br><br>
+    <div id="div03">
+        <h3>absolute</h3>
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+        
+    </div>
+    <br><br><br>
+    <div id="div04">
+        <h3>fixed</h3>
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+        
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <div id="div05">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+    </div>
+
+    <br>    <br>    <br>    <br>    <br>
+
+    <div id="div06">
+        <div class="box" id="crd1">1</div>
+        <div class="box" id="crd2">2</div>
+        <div class="box" id="crd3">3</div>
+        <div class="box" id="crd4">4</div>
+        <div class="box" id="crd5">5</div>
+    </div>
+<br><br><br>
+    <div id="div07">
+        <div class="sticky">
+            <p>position sticky</p>
+            <p>스크롤 되다가 상단에 붙어요</p>
+        </div>
+
+        <div style="padding-bottom: 2000px;">
+            <p>통신·방송의 시설기준과 신문의 기능을 보장하기 위하여 필요한 사항은 법률로 정한다. 공무원의 신분과 정치적 중립성은 법률이 정하는 바에 의하여 보장된다.
+
+                한 회계연도를 넘어 계속하여 지출할 필요가 있을 때에는 정부는 연한을 정하여 계속비로서 국회의 의결을 얻어야 한다. 위원은 정당에 가입하거나 정치에 관여할 수 없다.
+                
+                대통령은 법률이 정하는 바에 의하여 사면·감형 또는 복권을 명할 수 있다. 국회는 법률에 저촉되지 아니하는 범위안에서 의사와 내부규율에 관한 규칙을 제정할 수 있다.
+                
+                이 헌법중 공무원의 임기 또는 중임제한에 관한 규정은 이 헌법에 의하여 그 공무원이 최초로 선출 또는 임명된 때로부터 적용한다. 대통령의 국법상 행위는 문서로써 하며, 이 문서에는 국무총리와 관계 국무위원이 부서한다. 군사에 관한 것도 또한 같다.
+                
+                헌법개정안은 국회가 의결한 후 30일 이내에 국민투표에 붙여 국회의원선거권자 과반수의 투표와 투표자 과반수의 찬성을 얻어야 한다. 이 헌법시행 당시의 대법원장과 대법원판사가 아닌 법관은 제1항 단서의 규정에 불구하고 이 헌법에 
+                
+                의하여 임명된 것으로 본다.</p>
+        </div>
+    </div>
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+
+    
+</body>
+</html>

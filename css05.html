@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 5일차 1</title>
+
+    <style>
+        /* border-style */
+        /* html 태그의 외부 테두리 선의 스타일을 설정하는 CSS 속성 */
+        /* none(기본값), hiiden, dashed, dotted, double, groove, inset, outset, ridge, solid */
+        #div01 > div {
+            width: 200px;
+            height: 100px;
+            display: inline-block;
+            margin: 5px;
+            /* 테두리 선 굵기 설정 */
+            border-width: 15px;
+
+        }        
+        /* border-width */
+        /* html 태그의 외부 테두리 선의 굵기를 설정하는 css속성 */
+        /* border 속성처럼 한번에 4개의 방향의 굵기를 설정하는 속성 */
+        /* border-top,width, border-right-width, border-bottom-width, border-left-width 총 4개의 방향의 굵기를 설정하는 속성이 따로 존재함 */
+        /* thin, medium, thick, 크기(px) */
+        /* border-width에 값을 1개 입력 시 4개의 방향에 동일한 값을 설정 */
+        /* border-width에 값을 2개 입력 시 첫번쨰 값은 top/bottom 의 값을 나타내고, 두번째 값은 right/left 의 값을 살정함 */
+        /* border-width 에 값을 4개 입력시 각각 순서대로 top,right,bottom, left에 값이 설정 됨 */
+        #div01 > .box1 { border-style: dashed; }
+        #div01 > .box2 { border-style: dotted; }
+        #div01 > .box3 { border-style: double; }
+        #div01 > .box4 { border-style: groove; }
+        #div01 > .box5 { border-style: inset; }
+        #div01 > .box6 { border-style: outset; }
+        #div01 > .box7 { border-style: ridge; }
+        #div01 > .box8 { border-style: solid; }
+
+        #div > div {
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            margin: 15px;
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        #div02 > .box1 {border-width: medium;}
+        #div02 > .box2 {border-width: thin thick}
+        #div02 > .box3 {border-width: 5px 10px 15px 20px;}
+        #div02 > .box4 {border-top-width: 10px;}
+        #div02 > .box5 {border-right-width: 10px;}
+        #div02 > .box6 {border-bottom-width: 10px;}
+        #div02 > .box7 {border-left-width: 10px;}
+        #div02 > .box8 {border-width: 10px;}
+
+        /* bordr-color */
+        /*  html 태그의 테두리 선의 색상을 설정하는 css속성 */
+        /* 미리 정해놓은 색상 이름, hex 코드, rgb코드, hsl코드를 입력 */
+        /* border-color 사용 시 4개의 방향에 동일한 색상을 설정 */
+        /* border-top-color,border-right-color, border-bottom color, border-leftcolor 를 사용하여 각각의 방향에 색상을 다르게 설정할 수 있음 */
+        /* #아이디선택자 (>) 모양은 안으로 , div안으로 */
+        #div03 > div {
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            margin: 15px;
+            border-style: solid;
+            border-width: thick;
+        }
+        /* .box 에 . 은 클래스 선택자 */
+        #div03 > .box1 {border-color: blue;}
+        #div03 > .box2 {border-top-color: rgb(51, 211, 59);}
+        #div03 > .box3 {border-right-color: rgb(49, 114, 253);}
+        #div03 > .box4 {border-bottom-color: rgb(190, 17, 31);}
+        #div03 > .box5 {border-left-color: rgb(202, 67, 26);}
+
+        /* border 속성 */
+        /* html  태그의 테두리 속성 border-style, border-width, border-color 를 한번에 설정할 수 있는 css속성*/
+        /* 입력순서는 border-width, border-style, border-color */
+        /* 4개의 방향에 따로  값을 설정하기 위한  border-top,border-right, border-bottom, border-left 가 존재함 */
+
+        #div04 > div {
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            margin: 15px;
+        }
+
+        #div04 > .box1 { border: 5px solid brown}
+        #div04 > .box2 { border-top: thick dashed blueviolet;}
+        #div04 > .box3 { border-right: 5px dotted gray;}
+        #div04 > .box4 { border-bottom: 5px double green;}
+        #div04 > .box5 { border-left: 5px solid blue;}
+
+        /* border-radius */
+        /* 태그의 테두리, 모서리 각도를 설정하는 css속성 */
+        /* 값을 1개만 입력 시 4개의 방향에 동일한 각도를 설정 */
+        /* 값을 2개 입력 시 첫번쨰 값은 왼쪽 상단, 오른쪽 하단 설정 */
+        /* 두번쨰 값은 오른쪽 상단,왼쪽 하단 설정 */
+        /* 값을 3개만 입력시 첫번쨰 값은 왼쪽 상단 두번쨰 ,오른쪽 상단,왼쪽하단 ,세번째 값은 오른쪽 하단 하나 */
+        /* 값을 4개 입력 시 왼쪽상단,오른쪽상당,오른쪽 하단, 왼쪽 하단 순서 */
+        /*  border-radius 속성은 4개의 방향 각도를 동일하게 설정 */
+        /* 4개의 방향에 각각 따로 각도를 설정하려면 border- top-left-radius, border-top-right-radius,
+        border-bottom-right-radius,border-bottom-left-radius 를 사용하여 각 방향에 따로 값을 지정할수있다 */
+        /* 크기(px), 백분율(%) */
+
+        #div05 > div {
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            margin: 15px;
+            border: medium solid red;
+        }
+
+          
+        #div05 > .box1 { border-top-left-radius: 20px; }
+        #div05 > .box2 { border-top-right-radius: 20px; }
+        #div05 > .box3 { border-bottom-right-radius: 20px; }
+        #div05 > .box4 { border-bottom-left-radius: 20px; }
+        #div05 > .box5 { border-radius: 20px; } 
+        #div05 > .box6 { border-radius: 10%,20%; }
+        #div05 > .box7 { border-radius: 10% 15% 20%; }
+        #div05 > .box8 { border-radius: 10% 15% 20% 25%; }
+        #div05 > .box9 {
+            border-radius: 10% 15% 20% 25%;
+            background: url("../image/001.jpg");
+            background-size: cover;
+        }
+
+        /* 문제 1)border-radius 속성을 사용하여 사각형 모양인 div를 원형으로 출력하고 배경이미지도 출력하세요 */
+        /* 원형의 지름의 크기는 200px */
+        /* 완전한 원 */
+        /* 테두리 선의 모양은 점선 굵기는 2px 색상 암거나 */
+
+        
+           
+            /* dashed 혹은 dotted */
+
+            /* 문제 2) 문1번을 기반으로 세로로 타원형인 원 과, 가로로 타원형 만들기 */
+            
+            
+        
+
+        #div06 > .box1 {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            margin: 15px;
+            border: 2px dashed rgb(67, 8, 228);
+            border-radius: 50%;
+            background-image: url("../image/002.jpg");
+            background-size: cover;
+        }
+
+        #div07 > .box1 {
+            width: 300px;
+            height: 400px;
+            display: inline-block;
+            margin: 15px;
+            border: 2px dashed rgb(67, 8, 228);
+            border-radius:50% ;
+            background-image: url("../image/002.jpg");
+            background-size: cover;
+        }
+        
+        #div08 > .box1 {
+            width: 400px;
+            height: 300px;
+            display: inline-block;
+            margin: 15px;
+            border: 2px dashed rgb(2, 46, 31);
+            border-radius:50% ;
+            background-image: url("../image/002.jpg");
+            background-size: cover;
+        }
+
+        /* box-shodow */
+        /* html 태그의 테두리에 그림자 효과를 설정하는 css속성 */
+        /* none(기본값), 수평, 수직, 흐림, 번짐, 색상 */
+        /* 수평은 왼쪽에서 오른쪽 수직은 위에서 아래 (음수사용시 반대) */
+        /*  */
+
+        #div09 > div {
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            margin: 15px;
+            border: 2px solid;
+            border-radius: 20px;
+        }
+
+        #div09 > .box1 { box-shadow: 10px 1px 20px 20px black; }
+        #div09 > .box2 { box-shadow: 5px 5px 15px 5px grey; }
+
+        /* margin */
+        /* html 태그의 border 외각의 영역을 설정하는 css 속성 */
+        /* 다른 html 태그의 margin 영역과 겹쳐질 수 있음 */
+        /* matgin 값을 1개 입력시 4개의 방향의 동일한 값을 설정 */
+        /* margin 값을 2개 입력시 첫번쨰 값은 top/bottom 설정
+        두번쨰 값은 left/right 설정 */
+        /* margin 값을 3개 입력시 top/ 두번쨰 값은 left.right/값 설정 /bottom 순으로 설정 */
+        /* margin 값을 4개 입력시  top/right/bottom/left 순으로 값을 설정 */
+        /* margin-top,margin-right,margin-bottom,margin-left 속성을 사용하여 각 방향의 값을 설정 */
+        /* 크기 px ,백분율 %, auto */
+        /* margin: xx ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌaouto 랴고 입력시 html 태그가 중앙정렬 */
+        #div10 > div{
+            width: 150px;
+            height: 150px;
+            background: blue;
+
+        }
+
+        #div10> .box1 { margin: 30px; }
+        #div10> .box2 { margin: 30px 50px; }
+        #div10> .box3 { margin: 20px 20px 40px 50px; }
+        #div10 > .box4 { 
+            margin-top: 20px;
+            margin-right: 30px;
+            margin-bottom: 40px;
+            margin-left: 50px;
+        }
+        #div10 > .box5 { margin: 30px auto;}/
+
+
+
+        /* padding */
+        /* html 태그의 테두리 부분과 contents 영역사이의 공간을 설정하는 css속성*/
+        /* margin 과ㅑ 동일한 top,rignt 등등 을 가지고이ㅏㅆ다 */
+        /* 값을 1개 입력시 4개방향 동일한값설정 */
+        /* 2개입력시 첫번째와가틍 */
+
+        #div11 > div {
+            width: 200px;
+            height: auto;
+            background: darkblue;
+            display: inline-block;
+            margin: 15px;
+            color: cornsilk;
+
+        }
+
+        #div11 > .box1 { padding: 10px;}
+        #div11 > .box2 { padding: 10px 30px;}
+        #div11 > .box3 { padding: 10px 20px 30px 40px;}
+        #div11 > .box4 { 
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            padding-left: 40px;
+            }
+
+
+
+
+
+        
+
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+        <div class="box8"></div>
+    </div>
+
+    <div id="div02">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+    </div>
+
+    <div id="div03">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        
+    </div>
+    <div id="div04">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        
+    </div>
+
+    <div id="div05">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+        <div class="box8"></div>
+        <div class="box9"></div>
+    </div>
+    <hr>
+
+    <div id="div06">
+        <h1>문제1</h1><br>
+        <h3 style="color: rgb(238, 0, 0);">border-radius 속성을 사용하여 200px지름의 점선 굵기 2px인 원을 만들어라</h3>
+        <div class="box1"></div>
+    </div>
+    <hr>
+    <div id="div07">
+        <h1>문제2</h1><br>
+        <h3 style="color: rgb(238, 0, 0);">1번을 기반으로 세로 타원형 만들기</h3>
+        <div class="box1"></div>
+    </div>
+    <hr>
+    <div id="div08">
+        <h1>문제3</h1><br>
+        <h3 style="color: rgb(238, 0, 0);">1번을 기반으로 가로 타원형 만들기</h3>
+        <div class="box1"></div>
+    </div>
+    <hr>
+    <br><br><br>
+
+    <div id="div09">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+    <br><br><br>
+
+    <div id="div10">
+        <div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+
+    </div>
+</div>
+
+<div id="div11">
+    
+    <div class="box1">패딩이란 콘텐츠영역과 테두리 사이의 여백</div>
+    <div class="box2">패딩이란 콘텐츠영역과 테두리 사이의 여백</div>
+    <div class="box3">패딩이란 콘텐츠영역과 테두리 사이의 여백</div>
+    <div class="box4">패딩이란 콘텐츠영역과 테두리 사이의 여백</div>
+    <div class="box5">패딩이란 콘텐츠영역과 테두리 사이의 여백</div>
+
+<
+</body>
+</html>

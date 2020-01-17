@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css선택자</title>
+
+    <style>
+        /* css선택자 추가사항 */
+        
+        /* 자손 선택자 */
+        /* 상위 요소와 하위 요소 사이에 공백문자(' ')를 사용하는 선택자 */
+        /* 상위 요소에 포함된 모든 html 태그를 말함 */
+        /* 상위 요소에 포함된 html 요소를 뜻함 (단계에 관계없음) */
+        /* 하위 요소로 사용할 수있는 선택자는 태그 선택자 , id 선택자, class 선택자 */
+        /* section p { color : blue; }  */
+
+        /* 자식 선택자 */
+        /* 상위 요소에 포함된 요소 중 1단계 아래에 있는 html요소 */
+        /*  ''>'를 사용함 */
+        /* 하위요소로 사용할 수 있는 선택자는 태그 선택자 id 선택자 class 선택자 */
+        /* section > p { color : blue;} */
+        /* 인접 형제 선택자 */
+        /* 지정한 요소의 동일한 단계에 있는 html 요소를 선택하는 선택자 */
+        /* '+' 기호를 사용하여 원하는 요소를 선택함 */
+        /* 지정한 요소보다 아래에 있는 요소를 선택함 */
+
+        h2 {
+            color:red;
+        }
+        h2 + p { color: royalblue;}
+
+        .pclass + div {
+            padding: 20px;}
+            background-color: saddlebrown;}
+
+
+            h1 ~ ul {
+                color: blue;
+                font-weight: bold;
+            }
+
+            p ~ ul {
+                background-color: red;
+            }
+            
+            /* 속성 선택자 */
+            /* 지정한 요소의 현재 상태를 확인하여 html 요소를 선택하는 선택자 */
+            /* [속성] <--기호를 사용한다 */
+
+            a[href] {
+                background-color: seagreen;
+            }
+            
+            /* 속성 선택자 */
+            /* 지정한 속성 */
+            /* [속성명 = 값] 기호를 사용하는 선택자 */
+            /* selection [targe = "_self"] { color : blue;} */
+
+            a[target = "_blank"] {
+                padding-right: 30px;
+                text-decoration: none;
+                font-size: 24px;
+            }
+
+
+        
+</style>
+
+</head>
+<body>
+    <div id="div01">
+        <div>
+            <h2>내가 선택할</h2>
+            <p>인접 형제 선택자로 선택할  html태그</p>
+        </div>
+        <p class="pclass">더미태그</p>
+        <p>더미태그2</p>
+    </div>
+
+    <div id="div02">
+        <h1>예약 방법 및 요금</h1>
+        <ul>
+            <li>직접 전화</li>
+            <li>문자 남기기</li>
+        </ul>
+
+        <ul>
+            <li>1인 : 40000원</li>
+            <li>2인 : 60000원</li>
+            <li>3인 : 80000원</li>
+            <li>4인 : 100000원</li>
+        </ul>
+
+    </div>
+
+    <div>
+        <ul>
+            <li>아메리카노</li>
+            <li>카페라떼</li>
+            <li>에스프레소</li>
+        </ul>
+        <p>형제 선택자로 선택할 첫번째 태그요소</p>
+        <ul>
+            <li>바나나</li>
+            <li>파인애플</li>
+            <li>망고</li>
+        </ul>
+
+        <h2>형제 선택자로 선택되지 않을 태그요소</h2>
+        <ul>
+            <li>사과</li>
+            <li>복숭아</li>
+            <li>수박</li>
+        </ul>
+
+    </div>
+
+    <div id="div03"> 
+        <!-- 첫번쨰 a 태그는 href속성이 없으므로 선택안됨 -->
+        <ul>
+            <li><a>메인 메뉴</a></li>
+            <li><a href="#"></a>메뉴1</li>
+            <li><a href="#"></a>메뉴2</li>
+            <li><a href="#"></a>메뉴3</li>
+        </ul>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div id="04">
+        <h3>속성 = 값 선택자</h3>
+        <ul>
+            <li><a href="https://www.daum.net" target="_blank">다음홈페이지</a></li>
+            <li><a href="https://www.naver.com" target="_self">네이버홈페이지</a></li>
+            <li><a href="https://www.nate.com" target="_blank">네이트홈페이지</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>연습문제9-1</title>
+
+    <style>
+
+        
+
+         #div01 {
+              width: 800px;
+              height: 550px;
+              margin: 0 auto;
+              border: 1px solid rgb(0, 0, 0); 
+              border-radius: 30px;
+              padding: 20px;
+              position: relative;
+              
+              
+          }
+          #div01:hover .box {
+              -webkit-transform: rotate(720deg);
+              transform: rotate(720deg);
+              margin-left: 420px;
+
+          }
+
+          #div01 .box {
+              position: relative;
+              width: 100px;
+              height: 100px;
+              margin-bottom: 10px;
+              background-color: rgb(255, 65, 7);
+              font-size: 12px;
+
+          }
+
+          #div01 .box p {
+              text-align: center;
+              padding-top: 4px;
+
+          }
+          #no-delay {
+              -webkit-transition-duration: 5s;
+              -moz-transition-duration: 5s;
+              -o-transition-duration: 5s;
+              transition-duration: 5s;
+              
+              border: 1px solid black;
+          }
+          #no-delay:hover {
+              width: 300px;
+              height: 300px;
+              -webkit-transition-duration: 5s;
+              -moz-transition-duration: 5s;
+              -o-transition-duration: 5s;
+              transition-duration: 5s;
+              
+              background-color: rgb(15, 207, 233);
+          }
+
+    
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <div id="no-delay" class="box">
+            <p>top</p>
+        </div>
+        
+    </div>
+    
+</body>
+
+</html>

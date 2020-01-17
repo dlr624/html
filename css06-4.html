@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cSS6일차 4</title>
+    
+    <style>
+        div {
+            border: 3px solid red;
+            padding: 5px;
+        }
+        #img01 { float: left; }
+
+        #div02 > {
+            overflow: auto;}
+
+        #div02 { float: left}
+            
+        #div03 { float: left;}
+
+        #div03::after {
+            clear: both;
+            display: table;
+            content: "";
+        }
+
+
+        /* float 사용 시 부모 태그 영역을 벗어나는 상황이 발생되는데, 이것을 막는바업ㅂ 2가지 */
+        /* 1.부모태그에 overflow:를 설정하는방법 */
+        /* 스크롤 발생할수있음 */
+        /* 2. (추천)부모태그에 :after 를 추가하여 화면에 그려진 이후 동작을 설정하는방법 */
+        /* clear :both ,display,tabke,content 속성을 사용해야함 */
+
+    
+    </style>
+</head>
+<body>
+
+    <div id="div01">
+        
+        <p>한 회계연도를 넘어 계속하여 지출할 필요가 있을 때에는 정부는 연한을 정하여 계속비로서 국회의 의결을 얻어야 한다.
+
+            국회의원의 선거구와 비례대표제 기타 선거에 관한 사항은 법률로 정한다</p>
+        <img src="../image/001.jpg" alt="" id="img01"> 
+        <p>대한민국의 경제질서는 개인과 기업의 경제상의 자유와 창의를 존중함을 기본으로 한다. 
+            모든 국민은 거주·이전의 자유를 가진다. 예비비는 총액으로 국회의 의결을 얻어야 한다.
+            예비비의 지출은 차기국회의 승인을 얻어야 한다.
+        </p>    
+            
+
+    </div>
+    <br><br><br><hr>
+    <div id="div02">
+        
+        <p>한 회계연도를 넘어 계속하여 지출할 필요가 있을 때에는 정부는 연한을 정하여 계속비로서 국회의 의결을 얻어야 한다.
+
+            국회의원의 선거구와 비례대표제 기타 선거에 관한 사항은 법률로 정한다</p>
+        <img src="../image/001.jpg" alt="" id="img02"> 
+        <p>대한민국의 경제질서는 개인과 기업의 경제상의 자유와 창의를 존중함을 기본으로 한다. 
+            모든 국민은 거주·이전의 자유를 가진다. 예비비는 총액으로 국회의 의결을 얻어야 한다.
+            예비비의 지출은 차기국회의 승인을 얻어야 한다.
+        </p>    
+            
+
+    </div>
+    <div id="div03">
+        
+        <p>한 회계연도를 넘어 계속하여 지출할 필요가 있을 때에는 정부는 연한을 정하여 계속비로서 국회의 의결을 얻어야 한다.
+
+            국회의원의 선거구와 비례대표제 기타 선거에 관한 사항은 법률로 정한다</p>
+        <img src="../image/001.jpg" alt="" id="img02"> 
+        <p>대한민국의 경제질서는 개인과 기업의 경제상의 자유와 창의를 존중함을 기본으로 한다. 
+            모든 국민은 거주·이전의 자유를 가진다. 예비비는 총액으로 국회의 의결을 얻어야 한다.
+            예비비의 지출은 차기국회의 승인을 얻어야 한다.
+        </p>    
+            
+
+    </div>
+    
+</body>
+</html>
