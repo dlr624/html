@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css10-2</title>
+    <style>
+        .prod-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .prod-list li {
+            
+            position: relative;
+            float: left ;
+            padding: 0;
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .prod-list-img {
+            margin: 0;
+            padding: 0;
+            float: left;
+            z-index: 5;
+        }
+/* 사용 시 초기화 */
+        .prod-list::after {
+            clear: both;
+            display: table;
+            content: '';
+            
+        }
+
+        .prod-list .caption {
+            position: absolute;
+            padding-top: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            top: 200px;
+            opacity: 0;
+            -webkit-animation: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            z-index: 10;
+            
+            
+        }
+        /* 마우스 포인터가 위로 올라갔을 경우 */
+        .prod-list li:hover .caption {
+            opacity: 1;
+            -webkit-transform: translateY(-200px);
+            -moz-transform: translateY(-200px);
+            -o-transform: translateY(-200px);
+            -ms-transform: translateY(-200px);
+            transform: translateY(-200px);
+        }
+
+        .prod-list .caption h1, .prod-list .caption p {
+            color: #fff;
+            text-align: center;
+            margin-top: 0, auto;
+            padding: 20px;
+        } 
+        body {
+            padding-left: 50px;
+            padding-top: 50px;
+        }
+
+      #div01 .box1 {
+          width: 100px;
+          height: 100px;
+          background-color: green;
+          -webkit-transition: background 1s;
+          -moz-transition: background 1s;
+          -o-transition: background 1s;
+          -ms-transition: background 1s;
+          transition:background 1s;
+          border: 1px solid black;
+      }
+      #div01 .box1:hover {
+          background: yellow;
+      }
+
+      #div02 .box img:hover {
+              
+              animation-name: rotate;
+              animation-duration: 1s;
+              margin: 0 auto;
+              padding: 0;
+              transform: rotate(45deg);
+                  border:1px solid black;
+                  border-radius: 10px;
+          }
+          /* @-webkit-keyframes rotate { */
+              from {
+                  transform: rotate(0deg);
+              }
+              to {
+                  transform: rotate(45deg);
+                  border:1px solid black;
+                  border-radius: 10px;
+              }
+          
+          /* #div03 .photo:hover {
+              -webkit-transform-origin: left top;
+              -moz-transform-origin: left top;
+              -o-transform-origin: left top;
+              -ms-transform-origin: left top;
+              transform-origin: left top;
+              
+          } */
+          #div03 .img {
+            width: 600px;
+            height: 600px;
+            margin-top: 300px;
+            margin-left: 300px;
+        }
+        #div03 .img:hover {
+            -webkit-animation-name: photo;
+            -moz-animation-name: photo;
+            -o-animation-name: photo;
+            -ms-animation-name: photo;
+            animation-name: photo;
+            -webkit-animation-duration: 1s;
+            -moz-animation-duration: 1s;
+            -o-animation-duration: 1s;
+            -ms-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-iteration-count: infinite;
+            -o-animation-iteration-count: infinite;
+            -ms-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            -moz-animation-direction: alternate;
+            -o-animation-direction: alternate;
+            -ms-animation-direction: alternate;
+            animation-direction: alternate;
+        }
+
+        @-webkit-keyframes photo {
+            from {
+                width: 600px;
+                height: 600px;
+                margin-left: 300px;
+            }
+            to {
+                width: 600px;
+                height: 600px;
+                margin-left: 300px;
+                transform: scale(1.5);
+                box-shadow: 5px 5px 3px black;
+            }
+        }
+
+        @-moz-keyframes photo {
+            from {
+                width: 600px;
+                height: 600px;
+                margin-left: 300px;
+            }
+            to {
+                width: 600px;
+                height: 600px;
+                margin-left: 300px;
+                transform: scale(1.5);
+                box-shadow: 5px 5px 3px black;
+            }
+        }
+
+        @-ms-keyframes photo {
+            from {
+                width: 600px;
+                height: 600px;
+                margin-left: 300px;
+            }
+            to {
+                width: 600px;
+                height: 600px;
+                margin-left: 300px;
+                transform: scale(1.5);
+                box-shadow: 5px 5px 3px black;
+            }
+        }
+
+        @-o-keyframes photo {
+            from {
+                width: 600px;
+                height: 600px;
+                margin-left: 300px;
+            }
+            to {
+                width: 600px;
+                height: 600px;
+                margin-left: 300px;
+                transform: scale(1.5);
+                box-shadow: 5px 5px 3px black;
+            }
+        }
+
+        @keyframes photo {
+            from {
+                width: 600px;
+                height: 600px;
+                margin-left: 300px;
+            }
+            to {
+                width: 600px;
+                height: 600px;
+                margin-left: 300px;
+                transform: scale(1.5);
+                box-shadow: 5px 5px 3px black;
+            }
+        }
+          
+        
+
+
+        
+
+
+        
+    </style>
+</head>
+<body>
+    <h1>신상품 목록</h1>
+    <div class="container">
+        <ul class="prod-list">
+            <li>
+                <img src="../image/a1.jpg" alt="">
+                <div class="caption">
+                <h1>사과</h1>
+                <p>사과 5개 묶음 상품</p>
+                <p>가격 : 12,300원</p>
+                </div>
+            </li>
+            <li>
+                <img src="../image/011.jpg" alt="">
+                <div class="caption">
+                <h1>콜롬비아 산청 원두</h1>
+                <p>강배전 원두 5box</p>
+                <p>가격 : 52,300원</p>
+                </div>
+            </li>
+            <li>
+                <img src="../image/gif01.gif" alt="">
+                <div class="caption">
+                <h1>팽수 인형탈</h1>
+                <p>사람 포함</p>
+                <p>가격 : 32,300원</p>
+                </div>
+            </li>
+        </ul>        
+    </div>
+    <br><br><br><br><br><hr>
+
+    <div id="div01">
+        <div class="box1"></div>
+        
+    </div>
+    <br><br><br><br><hr>
+
+    <div id="div02">
+        <div class="box">
+            <img src="../image/001.jpg" alt="">
+        </div>
+        
+    </div>
+    <br><br><br><br><br><hr>
+
+    <div id="div03">
+        <div>
+            <img src="../image/003.jpg" alt="" class="img">
+        </div>        
+    </div>
+    <br><br><br><br><br><br><br><hr>
+    
+</body>
+</html>

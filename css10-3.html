@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>10-3</title>
+
+    <style>
+        /* 뷰포트*/
+        /* 뷰포트란 스마트폰 화면에서 실제 내용이 표시되는 영역 */
+        /* html의 meta 태그를 사용하여 뷰포트를 설정함 */
+        /* https://www.w3.org/tr/css-device-adapt-1/ */
+        /* 참고사이트<ㅡmeta name="viewport" content="속성1=값1, 속성2=값2, ..." */
+        
+        /* 속성 */
+        /* width : 뷰포트 너비, device-with 또는 크기 */
+        /* height : 뷰포트 높이, dvice-height 또는 크기 */
+        /* user-scalable : 확대/축소 가능 여부, yes or no */
+        /* initial-scale : 초기 확대/ 축소 값, 1~10까지(기본값 1) */
+        /* minimum-scale : 최소 확대/ 측서 깂, 0 ~10까지(기본값 0.25) */
+        /* maximum-scale : 최대 확대/ 축소 값, 0~10까지 (기본값1.6) */
+
+        /* 고정 그리드 레이아웃 */
+        /* 사이트의 너비를 고정값으로 지정하여 화면의 크기가 언제나 동일한 형태의 레이아웃 */
+        /* 가변 그리드 레이아웃 */
+        /* 사이트의 너비를 백분율(%)로 지정하여 해상도의 크기에 따라 화면 크기도 변하는 형태의 레이아ㅓ웃 */
+        #div01 .wrapper {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 960px;
+            height: 120px;
+            background-color: dodgerblue;
+            border-bottom: 1px solid black;
+        }
+
+        .header-text {
+            font-size: 40px;
+            color: white;
+            text-align: center;
+            line-height: 120px;
+        }
+
+        .content {
+            float: left;
+            width: 600px;
+            height: 400px;
+            padding: 15px;
+            background-color: #ffd800;
+        }
+
+        .right-side {
+            float: right;
+            width: 300px;
+            height: 400px;
+            padding: 1.5625%;
+            background-color: #00ff90;
+        }
+
+        .footer {
+            clear: both;
+            width: 960%;
+            height: 120px;
+            background-color:#c3590a;
+        } 
+
+        #div02 .wrapper {
+            width: 96%;
+            margin: 0 auto;
+        }
+
+        #div02 header {
+            width: 100%;
+            height: 12px;
+            background-color: #066cfa;
+            border-bottom: 1px solid black; 
+        }
+
+        #div02 .header-text {
+            font-size: 32px;
+            color: white;
+            text-align: center;
+            line-height: 12px;
+
+        }
+
+        #div02 .content {
+            float: left;
+            width: 62.5%;
+            height: 400px;
+            padding: 1.5625%;
+            background-color: #ffdd00;
+
+        }
+
+        #div02 .right-side {
+            float: right;
+            width: 31.25%;
+            height: 400px;
+            padding: 1.5625%;
+            background-color: #00ff90;
+
+        }
+
+        #div02 footer {
+            clear: both;
+            width: 100%;
+            height: 120px;
+            background-color: #c3590a;
+        }
+
+        /* 가변 글꼴 */
+        /* web 글꼴의 기본단위는 px(고정) */
+        /* em (가변형글꼴) */
+        /* 1em은 16px 과 동일 (px구할떄는 X 16)(em구할때는 px 나누기 16) */
+        /* http://pxtoem.com/ */
+        /* em단위로 작성된 글꼴은 브라우저창에 표시될 경우 해당 기기에 맞는 픽셀크기로 계산되어
+        표시됨 */
+        /* 부모 태그의 font-size에 따라서 자식 태그의 font-size 가 결정됨 */
+        /* rem단위는 기본 폰트의 크기가 16px로 고정되어 있음 */
+        /* em처럼 부모 태그의 font-size에 따라서 rem 단위의 크기가 변하지 않는다 */
+        /*  */
+
+
+        #div03 .wrapper {
+            width: 96%;
+            margin: 0 auto;
+            font-size: 12px;
+        }
+        #div03 header {
+            width: 100%;
+            height: 120px;
+            background-color: #066cfa;
+            border-bottom: 1px solid black;
+
+        }
+
+        #div03 .header-text {
+            font-size: 2em;
+            color: white;
+            text-align: center;
+            line-height: 120px;
+        }
+
+        #div03 .content {
+            float: left;
+            width: 62.5%;
+            height: 400px;
+            padding: 1.5625%;
+            background-color: yellow;
+            text-align: center;
+            line-height: 380px;
+            font-size: 1.5em;
+
+        }
+
+        #div03 .right-side {
+            float: right;
+            width: 31.25%;
+            height: 400px;
+            padding: 1.5625%;
+            background-color: green;
+            text-align: center;
+            line-height: 380px;
+            font-size: 1.5em;
+        }
+
+        #div03 footer {
+            clear: both;
+            width: 100%;
+            height: 120px;
+            background-color: brown;
+            text-align: center;
+            line-height: 120px;
+            font-size: 1.5em;
+        }
+
+       
+        /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+   
+        body {
+            font-size: 16px;
+        }
+        #div04 .wrapper {
+            width: 96%;
+            margin: 0 auto;
+            font-size: 12px;
+        }
+
+        #div04 .headert-text {
+            font-size: 2rem;
+            text-align: center;
+            
+
+        }
+        /* rem은 root폰트 크기에서 배수로 폰트 크기를 계산 */
+        /* root폰트 크기 16px X 2가 되어 32px임 */
+        
+        /* 부모 태그인 header-text 의 폰트 크기가 32px이므로 em은 부모 태그의 폰트 크기에 영향을 받으므로 32px X2 가 되어
+        64px 이다 */
+        #div04 .fontem {font-size: 2em;}
+        /* root 폰트 크기를 기준으로 하므로 16px X 2 가 되어 32px */
+        #div04 .fontrem {font-size: 2rem;}
+        /* em은 부모태그의 폰트 크기에 영향을 받으므로 부모태그header-text폰트크기 32px
+        X 1.5 가 되어 48px 이 됨*/
+        #div04 .fluid-text1 { font-size: 1.5em;}
+        /* root 폰트 크기를 기준으로 하므로 16 px X 1.5가 되어 24px */
+        #div04 .fluid-text2 { font-size: 1.5rem;}
+        
+    </style>
+</head>
+<body>
+
+    <!-- 고정형 그리드 레이아웃 -->
+    <div id="div01">
+        <div class="wrapper">
+            <header>
+                <h1 class="header-text">고정 그리드 레이아웃</h1>
+            </header>
+            <section class="content">
+                <h4>본문</h4>
+            </section>
+            <aside class="right-side">
+                <h4>사이드바</h4>
+            </aside>
+            <footer>
+                <h4>푸터</h4>
+            </footer>
+        </div>
+    </div>
+
+    <br><br><br>    <br><br><br>    <br><br><br><hr>    <br><br><br>
+
+    <div id="div02">
+        <div id="wrapper">
+            <header>
+                <h1 class="header-text">가변 그리드 레이아웃</h1>
+            </header>
+            <section class="content">
+                <h4>본문</h4>
+            </section>
+            <aside class="right-side">
+                <h4>사이드바</h4>
+            </aside>
+            <footer>
+                <h4>푸터</h4>
+            </footer>
+
+        </div>
+    </div>
+
+    <hr><br><br><br><br><br><br><br>
+
+    <div id="div03">
+        <div id="wrapper">
+            <header>
+                <h1 class="header-text">가변 그리드 레이아웃</h1>
+            </header>
+            <section class="content">
+                <h4>본문</h4>
+            </section>
+            <aside class="right-side">
+                <h4>사이드바</h4>
+            </aside>
+            <footer>
+                <h4>푸터</h4>
+            </footer>
+
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div id="div04">
+        <div id="wrapper">
+            <header class="header-text">
+                <p class="fontem">em단위를 상요한 글자</p>
+                <p class="fontrem">rem단위를 사요ㅕㅇ한 글자</p>
+                <p class="fluid-text1">em단위사용</p>
+                <p class="fluid-text2">rem단위사용</p>
+            </header>
+            
+
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+    
+
+</body>
+</html>
