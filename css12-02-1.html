@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css 12일차 2번파일</title>
+    <style>
+    #div01 .text { 
+        width: 960px;
+        margin: 0px;
+    }
+    header {
+        line-height: 130px;
+        width: 960px;
+        height: 120px;
+        background-color: purple;
+        border-color: purple;
+    }
+    #content {
+        float: left;
+        width: 200px;
+        height: 300px;
+        padding: 15px;
+        text-align: center; 
+    }
+       
+
+    .right-side {
+        float: right;
+        width: 300px;
+        height: 400px;
+        background-color: dodgerblue;
+        color: white;
+        text-align: center;
+    }
+
+    .left-side {
+        float: left;
+        width: 300px;
+        height: 400px;
+        padding: 15px;
+    }
+    li {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+        list-style: none;
+        color: white;
+        background-color: dodgerblue;
+        margin-bottom: 10px;
+       
+    }
+
+    main::after {
+        clear: both;
+        display: table;
+        content: "";
+    }
+
+    footer {
+        height:120px;
+        margin: 5px;
+        background-color: dodgerblue;
+        text-align: center;
+        text-align: center;
+        line-height: 120px;
+        color: white;
+    }
+    
+    .box {
+        display: flex;
+        flex-wrap: column;
+    }
+    /* .box li {
+        background-color: dodgerblue;
+            width: 200px;
+            height: 50px;
+            display: flex;
+            color: white;
+            margin: 4px;
+            padding: 10px;
+            
+    } */
+    
+                       
+                        
+                        
+
+    </style>
+</head>
+<body>
+        <div id="div01">
+            <div class="text">
+                <header>
+                   <h1>Chania</h1>
+                </header>
+                <main>
+                <aside class="left-side">
+                    <div class="box">
+                        <ul>
+                            <li>The fight</li>
+                            <li>The city</li>
+                            <li>The pizza</li>
+                            <li>The food</li>
+                        </ul>
+                    </div>
+                 </aside>
+                <section class="content">
+                    <h1>The City</h1><br><p>one two three one two threeone two threeone two three</p>
+                </section>
+               
+                <aside class="right-side">
+                    <h1>What?</h1>
+                    <p>I can do it</p>
+                    <br>
+                    <h1>where?</h1>
+                    <p>homehomehomehomehomehomehome</p>
+                    <h1>How?</h1>
+                    <p>gamegamegamegamegamegamegamegame</p>
+                </aside>
+                </main>
+                <footer>
+                    <p>2020년 설립 부산회사</p>
+                </footer>
+            </div>
+        </div>
+</body>
+</html>
